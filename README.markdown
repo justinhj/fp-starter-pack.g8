@@ -10,7 +10,7 @@ You need to install [giter8](https://github.com/n8han/giter8)
 after which you only need to:
 
 ```
-g8 neil/finch-skeleton.g8
+g8 bneil/finch-skeleton.g8
 ```
 
 ##Why Use Finch?
