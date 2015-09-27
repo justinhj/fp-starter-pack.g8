@@ -7,6 +7,12 @@ Also I wanted to make sure people working with finch got all the goodies.
 
 You need to install [giter8](https://github.com/n8han/giter8)
 
+after which you only need to:
+
+```
+g8 neil/finch-skeleton.g8
+```
+
 ##Why Use Finch?
 
 Because the reader monad is pretty sweet and trying out this whole server as a function is a neat application
