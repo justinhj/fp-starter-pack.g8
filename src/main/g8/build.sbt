@@ -4,7 +4,6 @@ import scalariform.formatter.preferences._
 
 seq(Revolver.settings: _*)
 
-resolvers += "Typesafe Snapshots" at "http://repo.typesafe.com/typesafe/snapshots/"
 
 /* scala versions and options */
 scalaVersion := "2.11.7"
@@ -59,6 +58,12 @@ fork := true
 
 initialCommands in console := "import scalaz._, Scalaz._"
 
+resolvers ++= Seq(
+  "TM" at "http://maven.twttr.com",
+  "Typesafe Snapshots" at "http://repo.typesafe.com/typesafe/snapshots/",
+  Resolver.sonatypeRepo("snapshots")
+)
+
 // scalariform
 scalariformSettings
 
@@ -69,3 +74,4 @@ ScalariformKeys.preferences := ScalariformKeys.preferences.value
   .setPreference(IndentPackageBlocks, true)
   .setPreference(IndentSpaces, 2)
   .setPreference(MultilineScaladocCommentsStartOnFirstLine, false)
+
