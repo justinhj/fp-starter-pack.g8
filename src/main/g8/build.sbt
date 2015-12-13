@@ -44,9 +44,12 @@ libraryDependencies ++= Seq(
   // -- Joda --
   "joda-time" % "joda-time" % "2.7",
   // -- Finch --
-  "com.github.finagle" %% "finch-core" % "0.8.0",
-  "com.github.finagle" %% "finch-circe" % "0.8.0",
-  "io.circe" %% "circe-generic" % "0.2.0-SNAPSHOT",
+  "com.github.finagle" %% "finch-core" % "0.9.2",
+  "com.github.finagle" %% "finch-circe" % "0.9.2",
+  // -- json/circe --
+  "io.circe" %% "circe-core" % "0.2.1",
+  "io.circe" %% "circe-generic" % "0.2.1",
+  "io.circe" %% "circe-jawn" % "0.2.1",
   // -- Shapeless --
   "com.chuusai" %% "shapeless" % "2.2.5",
   "org.scalaz" %% "scalaz-core" % "7.1.4",
@@ -61,6 +64,7 @@ initialCommands in console := "import scalaz._, Scalaz._"
 resolvers ++= Seq(
   "TM" at "http://maven.twttr.com",
   "Typesafe Snapshots" at "http://repo.typesafe.com/typesafe/snapshots/",
+  "Secured Central Repository" at "https://repo1.maven.org/maven2",
   Resolver.sonatypeRepo("snapshots")
 )
 
