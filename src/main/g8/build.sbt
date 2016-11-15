@@ -33,31 +33,33 @@ javaOptions in Universal ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-   // -- config
-  "com.typesafe" % "config" % "1.3.0",
+  // -- config
+  "com.typesafe" % "config" % "1.3.1",
   // -- testing --
-  "org.scalacheck" %% "scalacheck" % "1.12.5" % "test",
-  "org.typelevel" %% "shapeless-scalacheck" % "0.4",
+  "org.scalacheck" %% "scalacheck" % "1.13.4" % "test",
+  "org.typelevel" %% "shapeless-scalacheck" % "0.5",
   // -- Logging --
   "ch.qos.logback" % "logback-classic" % "1.1.3",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.1.0",
   // -- Joda --
-  "joda-time" % "joda-time" % "2.7",
+  "joda-time" % "joda-time" % "2.9.6",
   // -- Finch --
-  "com.github.finagle" %% "finch-core" % "0.9.2",
-  "com.github.finagle" %% "finch-circe" % "0.9.2",
+  "com.github.finagle" %% "finch-core" % "0.11.0-M4",
+  "com.github.finagle" %% "finch-circe" % "0.11.0-M4",
   // -- json/circe --
-  "io.circe" %% "circe-core" % "0.2.1",
-  "io.circe" %% "circe-generic" % "0.2.1",
-  "io.circe" %% "circe-jawn" % "0.2.1",
+  "io.circe" %% "circe-core" % "0.6.0",
+  "io.circe" %% "circe-generic" % "0.6.0",
+  "io.circe" %% "circe-jawn" % "0.6.0",
   // -- Shapeless --
-  "com.chuusai" %% "shapeless" % "2.2.5",
-  "org.scalaz" %% "scalaz-core" % "7.1.4",
+  "com.chuusai" %% "shapeless" % "2.3.2",
+  "org.scalaz" %% "scalaz-core" % "7.2.7",
   // -- Solid Libs
-  "com.github.scala-blitz" %% "scala-blitz" % "1.1"
+  "com.github.scala-blitz" %% "scala-blitz" % "1.2"
 )
 
 fork := true
+
+ivyScala := ivyScala.value map { _.copy(overrideScalaVersion = true) }
 
 initialCommands in console := "import scalaz._, Scalaz._"
 

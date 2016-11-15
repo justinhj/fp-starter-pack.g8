@@ -1,10 +1,11 @@
 package $organization$
 
-import io.finch.route._
-import com.twitter.finagle.Httpx
+import io.finch._
+import com.twitter.finagle.Http
+import com.twitter.util.Await
 
 object $name;format="Camel"$ extends App {
-  val api: Router[String] = get("hello") { "Hello, World!" }
+    val api: Endpoint[String] = get("hello") { Ok("Hello, World!") }
 
-  Httpx.serve(":8080", api.toService)
+    Await.ready(Http.server.serve(":8080", api.toServiceAs[Text.Plain]))
 }
