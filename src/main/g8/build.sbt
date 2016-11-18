@@ -49,12 +49,7 @@ libraryDependencies ++= Seq(
   // -- json/circe --
   "io.circe" %% "circe-core" % "0.6.0",
   "io.circe" %% "circe-generic" % "0.6.0",
-  "io.circe" %% "circe-jawn" % "0.6.0",
-  // -- Shapeless --
-  "com.chuusai" %% "shapeless" % "2.3.2",
-  "org.scalaz" %% "scalaz-core" % "7.2.7",
-  // -- Solid Libs
-  "com.github.scala-blitz" %% "scala-blitz" % "1.2"
+  "io.circe" %% "circe-jawn" % "0.6.0"
 )
 
 fork := true
