@@ -18,8 +18,4 @@ finch-core: the main finch classes
 
 finch-circe: the best json de/serializer (well argonaut and rapture-json are fairly good as well :)
 
-scalaz: all my favorite monads and sigels
-
-scala-blitz: some really amazing collection improvements
-
 scapegoat, scaliform, etc: clean code is good code
