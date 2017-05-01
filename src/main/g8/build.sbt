@@ -32,6 +32,9 @@ javaOptions in Universal ++= Seq(
   "-J-XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=100M"
 )
 
+val FinchVersion = "$finch_version"
+val CirceVersion = "$circe_version"
+
 libraryDependencies ++= Seq(
   // -- config
   "com.typesafe" % "config" % "1.3.1",
@@ -44,12 +47,12 @@ libraryDependencies ++= Seq(
   // -- Joda --
   "joda-time" % "joda-time" % "2.9.6",
   // -- Finch --
-  "com.github.finagle" %% "finch-core" % "0.11.0-M4",
-  "com.github.finagle" %% "finch-circe" % "0.11.0-M4",
+  "com.github.finagle" %% "finch-core" % FinchVersion,
+  "com.github.finagle" %% "finch-circe" % FinchVersion,
   // -- json/circe --
-  "io.circe" %% "circe-core" % "0.6.0",
-  "io.circe" %% "circe-generic" % "0.6.0",
-  "io.circe" %% "circe-jawn" % "0.6.0"
+  "io.circe" %% "circe-core" % CirceVersion,
+  "io.circe" %% "circe-generic" % CirceVersion,
+  "io.circe" %% "circe-jawn" % CirceVersion
 )
 
 fork := true
