@@ -32,8 +32,8 @@ javaOptions in Universal ++= Seq(
   "-J-XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=100M"
 )
 
-val FinchVersion = "$finch_version"
-val CirceVersion = "$circe_version"
+val FinchVersion = "$finch_version$"
+val CirceVersion = "$circe_version$"
 
 libraryDependencies ++= Seq(
   // -- config
