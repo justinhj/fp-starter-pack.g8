@@ -6,7 +6,7 @@ A solid foundation to start a finch/fingle app using circe
 
 Make sure you have sbt installed, then its as simple as running
 
-`sbt -sbt-version 0.13.15 new bneil/finch-skeleton.g8`
+`sbt re-start`
 
 You should be able to go to
 
