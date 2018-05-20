@@ -11,7 +11,7 @@ object $name;format="Camel"$ {
 
     val sum = (x |@| y){_ + _}
 
-    println(s"$x + $y = $sum")
+    println(s"\$x + \$y = $sum")
 
   }
 
