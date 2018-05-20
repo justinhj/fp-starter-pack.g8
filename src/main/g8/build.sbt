@@ -37,6 +37,7 @@ libraryDependencies ++= Seq(
   "com.typesafe" % "config" % "1.3.1",
   // -- testing --
   "org.scalacheck" %% "scalacheck" % "1.13.4" % "test",
+  "org.scalatest" %% "scalatest" % "3.0.1" % "test",
   // -- Logging --
   "ch.qos.logback" % "logback-classic" % "1.1.3",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.9.0",
