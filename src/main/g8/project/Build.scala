@@ -1,17 +1,15 @@
 import sbt._
 import sbt.Keys._
 
-object $name;format="Camel"$Build extends Build {
+object $name;format="Camel"$Build {
 
-  lazy val $name;format="camel"$ = Project(
-    id = "$name;format="norm"$",
-    base = file("."),
-    settings = Project.defaultSettings ++ Seq(
+  lazy val $name;format="camel"$ = (project in file(".")).
+    settings (
       name := "$name$",
       organization := "$organization$",
       version := "$version$",
       scalaVersion := "$scala_version$"
       // add other settings here
     )
-  )
+
 }
