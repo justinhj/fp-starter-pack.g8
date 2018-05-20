@@ -9,8 +9,6 @@ scalacOptions ++= Seq(
   , "-unchecked"
   , "-encoding", "UTF-8"
   , "-Xlint"
-  , "-Yclosure-elim"
-  , "-Yinline"
   , "-Xverify"
   , "-feature"
   ,"-Ypartial-unification"
@@ -41,7 +39,7 @@ libraryDependencies ++= Seq(
   "org.scalacheck" %% "scalacheck" % "1.13.4" % "test",
   // -- Logging --
   "ch.qos.logback" % "logback-classic" % "1.1.3",
-  "com.typesafe.scala-logging" %% "scala-logging" % "3.1.0",
+  "com.typesafe.scala-logging" %% "scala-logging" % "3.9.0",
   // -- json/circe --
   "io.circe" %% "circe-core" % CirceVersion,
   "io.circe" %% "circe-generic" % CirceVersion,
