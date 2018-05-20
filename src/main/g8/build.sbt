@@ -57,7 +57,7 @@ libraryDependencies ++= Seq(
   // scalaz
   "org.scalaz" %% "scalaz-core" % ScalaZVersion,
   // li haoyi ammonite repl embed
-  "com.lihaoyi" % "ammonite" % "1.0.0" % "test" cross CrossVersion.full
+  "com.lihaoyi" % "ammonite" % "1.1.0-17-6c3552c" % "test" cross CrossVersion.full
 
 )
 
