@@ -1,12 +1,14 @@
 package $organization$
 
-import io.finch._
-import com.twitter.finagle.Http
-import com.twitter.util.Await
+import scalaz._, Scalaz._
 
-object $name;format="Camel"$ extends App {
-    val api: Endpoint[String] = get("hello") { Ok("Hello, World!") }
+object $name;format="Camel"$ {
 
-    println("started http://localhost:8080")
-    Await.ready(Http.server.serve(":8080", api.toServiceAs[Text.Plain]))
+  def main(args : Array[String]) : Unit = {
+
+    println("Let's do amazing things!")
+
+
+  }
+
 }

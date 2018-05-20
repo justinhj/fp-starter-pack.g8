@@ -4,9 +4,8 @@ import scalariform.formatter.preferences._
 
 seq(Revolver.settings: _*)
 
-
 /* scala versions and options */
-scalaVersion := "2.11.7"
+scalaVersion := "$scala_version$"
 
 // These options will be used for *all* versions.
 scalacOptions ++= Seq(
@@ -18,6 +17,8 @@ scalacOptions ++= Seq(
   , "-Yinline"
   , "-Xverify"
   , "-feature"
+  ,"-Ypartial-unification",
+  ,"-Xfatal-warnings"
   , "-language:postfixOps"
   //,"-optimise"
 )
@@ -32,36 +33,36 @@ javaOptions in Universal ++= Seq(
   "-J-XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=100M"
 )
 
-val FinchVersion = "$finch_version$"
 val CirceVersion = "$circe_version$"
+val MonixVersion = "$monix_version$"
+val ScalaZVersion = "$scalaz_version$"
 
 libraryDependencies ++= Seq(
-  // -- config
   "com.typesafe" % "config" % "1.3.1",
   // -- testing --
   "org.scalacheck" %% "scalacheck" % "1.13.4" % "test",
   // -- Logging --
   "ch.qos.logback" % "logback-classic" % "1.1.3",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.1.0",
-  // -- Joda --
-  "joda-time" % "joda-time" % "2.9.6",
-  // -- Finch --
-  "com.github.finagle" %% "finch-core" % FinchVersion,
-  "com.github.finagle" %% "finch-circe" % FinchVersion,
   // -- json/circe --
   "io.circe" %% "circe-core" % CirceVersion,
   "io.circe" %% "circe-generic" % CirceVersion,
-  "io.circe" %% "circe-jawn" % CirceVersion
-)
+  "io.circe" %% "circe-jawn" % CirceVersion,
+  "io.circe" %% "circe-yaml" % CirceVersion,
+  // monix
+  "io.monix" %% "monix" % MonixVersion,
+  // shapeless
+  "com.chuusai" %% "shapeless" % "2.3.3",
+  // scalaz
+  "org.scalaz" %% "scalaz-core" % ScalaZVersion,
+  // li haoyi ammonite repl embed
+  "com.lihaoyi" % "ammonite" % "1.0.0" % "test" cross CrossVersion.full
 
-fork := true
+)
 
 ivyScala := ivyScala.value map { _.copy(overrideScalaVersion = true) }
 
-initialCommands in console := "import scalaz._, Scalaz._"
-
 resolvers ++= Seq(
-  "TM" at "http://maven.twttr.com",
   "Typesafe Snapshots" at "http://repo.typesafe.com/typesafe/snapshots/",
   "Secured Central Repository" at "https://repo1.maven.org/maven2",
   Resolver.sonatypeRepo("snapshots")
@@ -78,3 +79,20 @@ ScalariformKeys.preferences := ScalariformKeys.preferences.value
   .setPreference(IndentSpaces, 2)
   .setPreference(MultilineScaladocCommentsStartOnFirstLine, false)
 
+// ammonite repl
+sourceGenerators in Test += Def.task {
+  val file = (sourceManaged in Test).value / "amm.scala"
+  IO.write(file, """object amm extends App { ammonite.Main().run() }""")
+  Seq(file)
+}.taskValue
+
+// Optional, required for the `source` command to work
+(fullClasspath in Test) ++= {
+  (updateClassifiers in Test).value
+    .configurations
+    .find(_.configuration == Test.name)
+    .get
+    .modules
+    .flatMap(_.artifacts)
+    .collect{case (a, f) if a.classifier == Some("sources") => f}
+}
