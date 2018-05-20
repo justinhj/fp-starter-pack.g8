@@ -1,9 +1,5 @@
 import sbt._
 
-import scalariform.formatter.preferences._
-
-seq(Revolver.settings: _*)
-
 /* scala versions and options */
 scalaVersion := "$scala_version$"
 
@@ -25,14 +21,14 @@ scalacOptions ++= Seq(
 
 javacOptions ++= Seq("-Xlint:unchecked", "-Xlint:deprecation", "-source", "1.7", "-target", "1.7")
 
-javaOptions in Universal ++= Seq(
-  "-J-server",
-  "-J-Xms1g -Xmx4g",
-  "-J-XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled",
-  "-J-XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=68",
-  "-J-XX:+ScavengeBeforeFullGC -XX:+CMSScavengeBeforeRemark",
-  "-J-XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=100M"
-)
+// javaOptions in Universal ++= Seq(
+//   "-J-server",
+//   "-J-Xms1g -Xmx4g",
+//   "-J-XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled",
+//   "-J-XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=68",
+//   "-J-XX:+ScavengeBeforeFullGC -XX:+CMSScavengeBeforeRemark",
+//   "-J-XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=100M"
+// )
 
 val CirceVersion = "$circe_version$"
 val MonixVersion = "$monix_version$"
@@ -62,7 +58,7 @@ libraryDependencies ++= Seq(
 
 )
 
-ivyScala := ivyScala.value map { _.copy(overrideScalaVersion = true) }
+//ivyScala := ivyScala.value map { _.copy(overrideScalaVersion = true) }
 
 resolvers ++= Seq(
   "Typesafe Snapshots" at "http://repo.typesafe.com/typesafe/snapshots/",
@@ -71,15 +67,15 @@ resolvers ++= Seq(
 )
 
 // scalariform
-scalariformSettings
+//scalariformSettings
 
-ScalariformKeys.preferences := ScalariformKeys.preferences.value
-  .setPreference(AlignSingleLineCaseStatements, true)
-  .setPreference(DoubleIndentClassDeclaration, true)
-  .setPreference(IndentLocalDefs, true)
-  .setPreference(IndentPackageBlocks, true)
-  .setPreference(IndentSpaces, 2)
-  .setPreference(MultilineScaladocCommentsStartOnFirstLine, false)
+// ScalariformKeys.preferences := ScalariformKeys.preferences.value
+//   .setPreference(AlignSingleLineCaseStatements, true)
+//   .setPreference(DoubleIndentClassDeclaration, true)
+//   .setPreference(IndentLocalDefs, true)
+//   .setPreference(IndentPackageBlocks, true)
+//   .setPreference(IndentSpaces, 2)
+//   .setPreference(MultilineScaladocCommentsStartOnFirstLine, false)
 
 // ammonite repl
 sourceGenerators in Test += Def.task {
