@@ -37,6 +37,7 @@ javaOptions in Universal ++= Seq(
 val CirceVersion = "$circe_version$"
 val MonixVersion = "$monix_version$"
 val ScalaZVersion = "$scalaz_version$"
+val ShapelessVersion = "$shapeless_version$"
 
 libraryDependencies ++= Seq(
   "com.typesafe" % "config" % "1.3.1",
@@ -49,15 +50,15 @@ libraryDependencies ++= Seq(
   "io.circe" %% "circe-core" % CirceVersion,
   "io.circe" %% "circe-generic" % CirceVersion,
   "io.circe" %% "circe-jawn" % CirceVersion,
-  "io.circe" %% "circe-yaml" % CirceVersion,
+  "io.circe" %% "circe-yaml" % "0.8.0",
   // monix
   "io.monix" %% "monix" % MonixVersion,
   // shapeless
-  "com.chuusai" %% "shapeless" % "2.3.3",
+  "com.chuusai" %% "shapeless" % ShapelessVersion,
   // scalaz
   "org.scalaz" %% "scalaz-core" % ScalaZVersion,
   // li haoyi ammonite repl embed
-  "com.lihaoyi" % "ammonite" % "1.1.0-17-6c3552c" % "test" cross CrossVersion.full
+  "com.lihaoyi" % "ammonite" % "1.1.2" % "test" cross CrossVersion.full
 
 )
 
