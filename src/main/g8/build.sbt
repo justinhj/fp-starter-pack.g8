@@ -3,6 +3,8 @@ import sbt._
 /* scala versions and options */
 scalaVersion := "$scala_version$"
 
+addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.9.6")
+
 // These options will be used for *all* versions.
 scalacOptions ++= Seq(
   "-deprecation"
@@ -13,7 +15,7 @@ scalacOptions ++= Seq(
   , "-feature"
   ,"-Ypartial-unification"
   ,"-Xfatal-warnings"
-  , "-language:postfixOps"
+  , "-language:_"
   //,"-optimise"
 )
 
@@ -54,6 +56,8 @@ libraryDependencies ++= Seq(
   "com.chuusai" %% "shapeless" % ShapelessVersion,
   // scalaz
   "org.scalaz" %% "scalaz-core" % ScalaZVersion,
+  // type classes
+  "com.github.mpilquist" %% "simulacrum" % "0.12.0",
   // li haoyi ammonite repl embed
   "com.lihaoyi" % "ammonite" % "1.1.2" % "test" cross CrossVersion.full
 
