@@ -26,12 +26,12 @@ You can access an Ammonite REPL (Ammonite greatly improves the Scala REPL) by ru
 
 ## Main libraries included 
 
-Cats
-Scalaz
-Circe - work with Json
-Fs2 - streams
-Monix - Task, Reactive
-Shapeless - Generic programming
+* Cats
+* Scalaz
+* Circe - work with Json
+* Fs2 - streams
+* Monix - Task, Reactive
+* Shapeless - Generic programming
 
 ## Origin
 
