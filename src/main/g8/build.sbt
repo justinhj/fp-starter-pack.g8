@@ -46,6 +46,8 @@ libraryDependencies ++= Seq(
   "io.circe" %% "circe-generic" % CirceVersion,
   "io.circe" %% "circe-jawn" % CirceVersion,
   "io.circe" %% "circe-yaml" % "0.8.0",
+  // fs2
+  "co.fs2" %% "fs2-core" % "0.10.4", // For cats 1.1.0 and cats-effect 0.10
   // monix
   "io.monix" %% "monix" % MonixVersion,
   // shapeless
