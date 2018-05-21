@@ -24,6 +24,15 @@ You can access an Ammonite REPL (Ammonite greatly improves the Scala REPL) by ru
 
 `test:run` 
 
+## Main libraries included 
+
+Cats
+Scalaz
+Circe - work with Json
+Fs2 - streams
+Monix - Task, Reactive
+Shapeless - Generic programming
+
 ## Origin
 
 This is a fork of bneil/finch-skeleton.g8 
