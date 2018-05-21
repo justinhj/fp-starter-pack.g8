@@ -1,5 +1,14 @@
 import sbt._
 
+lazy val $name;format="camel"$ = (project in file(".")).
+  settings (
+    name := "$name$",
+    organization := "$organization$",
+    version := "$version$",
+    scalaVersion := "$scala_version$"
+    // add other settings here
+  )
+
 /* scala versions and options */
 scalaVersion := "$scala_version$"
 
@@ -89,13 +98,3 @@ sourceGenerators in Test += Def.task {
   Seq(file)
 }.taskValue
 
-// Optional, required for the `source` command to work
-(fullClasspath in Test) ++= {
-  (updateClassifiers in Test).value
-    .configurations
-    .find(_.configuration == Test.name)
-    .get
-    .modules
-    .flatMap(_.artifacts)
-    .collect{case (a, f) if a.classifier == Some("sources") => f}
-}
