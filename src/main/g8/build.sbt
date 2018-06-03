@@ -39,6 +39,8 @@ javacOptions ++= Seq("-Xlint:unchecked", "-Xlint:deprecation", "-source", "1.7",
 //   "-J-XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=100M"
 // )
 
+val CatsVersion = "$cats_version"
+val CatsEffectVersion = "$cats_effect_version"
 val CirceVersion = "$circe_version$"
 val MonixVersion = "$monix_version$"
 val ScalaZVersion = "$scalaz_version$"
@@ -57,6 +59,9 @@ libraryDependencies ++= Seq(
   "io.circe" %% "circe-generic" % CirceVersion,
   "io.circe" %% "circe-jawn" % CirceVersion,
   "io.circe" %% "circe-yaml" % "0.8.0",
+  // Cats
+  "org.typelevel" %% "cats-core" % CatsVersion,
+  "org.typelevel" %% "cats-effect" % CatsEffectVersion,
   // fs2
   "co.fs2" %% "fs2-core" % "0.10.4", // For cats 1.1.0 and cats-effect 0.10
   // monix
