@@ -28,6 +28,7 @@ You can access an Ammonite REPL (Ammonite greatly improves the Scala REPL) by ru
 
 * Cats
 * Scalaz
+* ZIO
 * Circe - work with Json
 * Fs2 - streams
 * Monix - Task, Reactive
