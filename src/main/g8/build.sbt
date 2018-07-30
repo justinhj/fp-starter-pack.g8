@@ -44,6 +44,7 @@ val CatsEffectVersion = "$cats_effect_version$"
 val CirceVersion = "$circe_version$"
 val MonixVersion = "$monix_version$"
 val ScalaZVersion = "$scalaz_version$"
+val ZIOVersion = "$zio_version$"
 val ShapelessVersion = "$shapeless_version$"
 
 libraryDependencies ++= Seq(
