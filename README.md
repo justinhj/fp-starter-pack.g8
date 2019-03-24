@@ -38,7 +38,7 @@ You can access an Ammonite REPL (Ammonite greatly improves the Scala REPL) by ru
 
 This is a fork of bneil/finch-skeleton.g8 
 
-I have butchered that project to my own ends by updating Scala, SBT, adding and removing libaries and plugins until it met my needs.
+I used that excellent example of a g8 template and modified for my own ends by updating Scala, SBT, adding and removing libaries and plugins
 
 
 
