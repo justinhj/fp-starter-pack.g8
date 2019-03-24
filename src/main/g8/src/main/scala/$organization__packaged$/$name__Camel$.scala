@@ -1,18 +1,20 @@
 package $organization$
 
-import scalaz._, Scalaz._
+// Created by https://github.com/justinhj/fp-starter-pack.g8
+// Simple ZIO App
 
-object $name;format="Camel"$ {
+import scalaz.zio.App
+import scalaz.zio.console._
 
-  def main(args : Array[String]) : Unit = {
+object $name;format="Camel"$ extends App {
 
-    val x = 3.just
-    val y = 5.just
+  def run(args: List[String]) =
+    myAppLogic.fold(_ => 1, _ => 0)
 
-    val sum = (x |@| y){_ + _}
-
-    println(s"\$x + \$y = \$sum")
-
-  }
-
+  val myAppLogic =
+    for {
+      _ <- putStrLn("Hello! What is your name?")
+      n <- getStrLn
+      _ <- putStrLn(s"Hello, \${n}, welcome to ZIO!")
+    } yield ()
 }
