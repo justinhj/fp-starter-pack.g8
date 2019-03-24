@@ -46,6 +46,7 @@ val MonixVersion = "$monix_version$"
 val ScalaZVersion = "$scalaz_version$"
 val ZIOVersion = "$zio_version$"
 val ShapelessVersion = "$shapeless_version$"
+val FS2Version = "$zio_version$"
 
 libraryDependencies ++= Seq(
   "com.typesafe" % "config" % "1.3.1",
@@ -64,7 +65,7 @@ libraryDependencies ++= Seq(
   "org.typelevel" %% "cats-core" % CatsVersion,
   "org.typelevel" %% "cats-effect" % CatsEffectVersion,
   // fs2
-  "co.fs2" %% "fs2-core" % "0.10.4", // For cats 1.1.0 and cats-effect 0.10
+  "co.fs2" %% "fs2-core" % FS2Version,
   // monix
   "io.monix" %% "monix" % MonixVersion,
   // shapeless
