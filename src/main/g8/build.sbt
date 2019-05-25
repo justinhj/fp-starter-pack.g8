@@ -56,11 +56,6 @@ libraryDependencies ++= Seq(
   // -- Logging --
   "ch.qos.logback" % "logback-classic" % "1.1.3",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.9.0",
-  // -- json/circe --
-  "io.circe" %% "circe-core" % CirceVersion,
-  "io.circe" %% "circe-generic" % CirceVersion,
-  "io.circe" %% "circe-jawn" % CirceVersion,
-  "io.circe" %% "circe-yaml" % "0.8.0",
   // Cats
   "org.typelevel" %% "cats-core" % CatsVersion,
   "org.typelevel" %% "cats-effect" % CatsEffectVersion,
@@ -76,7 +71,7 @@ libraryDependencies ++= Seq(
   // type classes
   "com.github.mpilquist" %% "simulacrum" % "0.12.0",
   // li haoyi ammonite repl embed
-  "com.lihaoyi" % "ammonite" % "1.1.2" % "test" cross CrossVersion.full
+  "com.lihaoyi" % "ammonite" % "1.6.7" % "test" cross CrossVersion.full
 
 )
 
