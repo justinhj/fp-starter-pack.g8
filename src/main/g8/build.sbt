@@ -42,7 +42,6 @@ javacOptions ++= Seq("-Xlint:unchecked", "-Xlint:deprecation", "-source", "1.7",
 val CatsVersion = "$cats_version$"
 val CatsEffectVersion = "$cats_effect_version$"
 val MonixVersion = "$monix_version$"
-val ScalaZVersion = "$scalaz_version$"
 val ZIOVersion = "$zio_version$"
 val ShapelessVersion = "$shapeless_version$"
 val FS2Version = "$fs2_version$"
@@ -65,7 +64,7 @@ libraryDependencies ++= Seq(
   // shapeless
   "com.chuusai" %% "shapeless" % ShapelessVersion,
   // scalaz
-  "dev.zio" %% "zio" % ScalaZVersion,
+  "dev.zio" %% "zio" % ZIOVersion,
   "dev.zio" %% "zio-streams" % ZIOVersion,
   // type classes
   "com.github.mpilquist" %% "simulacrum" % "0.12.0",
