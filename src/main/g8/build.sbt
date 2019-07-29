@@ -61,7 +61,7 @@ libraryDependencies ++= Seq(
   "com.chuusai" %% "shapeless" % ShapelessVersion,
   // scalaz
   "org.scalaz" %% "scalaz-core" % ScalaZVersion,
-  "org.scalaz" %% "scalaz-zio" % ZIOVersion,
+  "dev.zio" %% "zio" % ZIOVersion,
   // type classes
   "com.github.mpilquist" %% "simulacrum" % "0.12.0",
   // li haoyi ammonite repl embed
