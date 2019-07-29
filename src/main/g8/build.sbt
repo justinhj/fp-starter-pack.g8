@@ -39,12 +39,11 @@ javacOptions ++= Seq("-Xlint:unchecked", "-Xlint:deprecation", "-source", "1.7",
 //   "-J-XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=100M"
 // )
 
-val CatsVersion = "$cats_version$"
-val CatsEffectVersion = "$cats_effect_version$"
 val MonixVersion = "$monix_version$"
 val ZIOVersion = "$zio_version$"
 val ShapelessVersion = "$shapeless_version$"
 val FS2Version = "$fs2_version$"
+val ScalaZVersion = "$scalaz_version$"
 
 libraryDependencies ++= Seq(
   "com.typesafe" % "config" % "1.3.1",
@@ -64,8 +63,8 @@ libraryDependencies ++= Seq(
   // shapeless
   "com.chuusai" %% "shapeless" % ShapelessVersion,
   // scalaz
-  "dev.zio" %% "zio" % ZIOVersion,
-  "dev.zio" %% "zio-streams" % ZIOVersion,
+  "org.scalaz" %% "scalaz-core" % ScalaZVersion,
+  "org.scalaz" %% "scalaz-zio" % ZIOVersion,
   // type classes
   "com.github.mpilquist" %% "simulacrum" % "0.12.0",
   // li haoyi ammonite repl embed

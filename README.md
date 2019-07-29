@@ -1,6 +1,6 @@
 # Summary 
 
-Giter8 template to get up and running with Scalaz, Cats (and other Typelevel projects such as Circe and Monix) includes Li Haoyi's Ammonite REPL
+Giter8 template to get up and running with Zio, Scalaz, Fs2, Monix and includes Li Haoyi's Ammonite REPL
 
 ```
 g8 justinhj/fp-starter-pack.g8
@@ -26,7 +26,7 @@ You can access an Ammonite REPL (Ammonite greatly improves the Scala REPL) by ru
 
 ## Main libraries included 
 
-* Cats - Lighweight modular fp library (type classes and data types)
+* Scalaz - Pure fp library
 * ZIO - Typesafe composable async and concurrent programming  
 * Fs2 - pure functional streams
 * Monix - Reactive programming
