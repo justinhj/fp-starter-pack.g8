@@ -23,7 +23,7 @@ scalacOptions ++= Seq(
   , "-Xverify"
   , "-feature"
   ,"-Ypartial-unification"
-  ,"-Xfatal-warnings"
+  //,"-Xfatal-warnings" // Recommend enable before you commit code
   , "-language:_"
   //,"-optimise"
 )
@@ -65,8 +65,8 @@ libraryDependencies ++= Seq(
   // shapeless
   "com.chuusai" %% "shapeless" % ShapelessVersion,
   // scalaz
-  "org.scalaz" %% "scalaz-core" % ScalaZVersion,
-  "org.scalaz" %% "scalaz-zio" % ZIOVersion,
+  "dev.zio" %% "zio" % ScalaZVersion,
+  "dev.zio" %% "zio-streams" % ZIOVersion,
   // type classes
   "com.github.mpilquist" %% "simulacrum" % "0.12.0",
   // li haoyi ammonite repl embed
