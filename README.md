@@ -26,11 +26,10 @@ You can access an Ammonite REPL (Ammonite greatly improves the Scala REPL) by ru
 
 ## Main libraries included 
 
-* Cats
-* Scalaz
-* ZIO
-* Fs2 - streams
-* Monix - Task, Reactive
+* Cats - Lighweight modular fp library (type classes and data types)
+* ZIO - Typesafe composable async and concurrent programming  
+* Fs2 - pure functional streams
+* Monix - Reactive programming
 * Shapeless - Generic programming
 
 ## Origin
