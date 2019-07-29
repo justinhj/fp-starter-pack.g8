@@ -1,6 +1,6 @@
 # Summary 
 
-Giter8 template to get up and running with Scalaz, Cats (and other Typelevel projects such as Circe and Monix) includes Li Haoyi's Ammonite REPL
+Giter8 template to get up and running with Cats, Zio, Monix, Fs2 and includes Li Haoyi's Ammonite REPL
 
 ```
 g8 justinhj/fp-starter-pack.g8
@@ -32,11 +32,14 @@ You can access an Ammonite REPL (Ammonite greatly improves the Scala REPL) by ru
 * Monix - Reactive programming
 * Shapeless - Generic programming
 
+## What about Scalaz
+
+Use the Scalaz branch to replace Cats with Scalaz
+
+`sbt new justinhj/fp-starter-pack.g8 --branch scalaz`
+
 ## Origin
 
 This is a fork of bneil/finch-skeleton.g8 
 
 I used that excellent example of a g8 template and modified for my own ends by updating Scala, SBT, adding and removing libaries and plugins
-
-
-
