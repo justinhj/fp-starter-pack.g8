@@ -3,8 +3,8 @@ package $organization$
 // Created by https://github.com/justinhj/fp-starter-pack.g8
 // Simple ZIO App
 
-import scalaz.zio.App
-import scalaz.zio.console._
+import zio.App
+import zio.console._
 
 object $name;format="Camel"$ extends App {
 
