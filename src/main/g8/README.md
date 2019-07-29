@@ -1,6 +1,6 @@
-# Scala functional programming starter pack
+# Your amazing project
 
-TODO 
+TODO Write your amazing project README
 
 
 
