@@ -8,7 +8,7 @@ g8 justinhj/fp-starter-pack.g8
 
 or to use directly from sbt you can use:
 
-`sbt new justinhj/fp-starter-pack.g8`
+`sbt new justinhj/fp-starter-pack.g8 --branch scalaz`
 
 Reply to the questions to set each variable; the only one you have to change is the project name.
 
