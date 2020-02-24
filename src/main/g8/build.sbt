@@ -45,6 +45,7 @@ val MonixVersion = "$monix_version$"
 val ZIOVersion = "$zio_version$"
 val ShapelessVersion = "$shapeless_version$"
 val FS2Version = "$fs2_version$"
+val AmmoniteVersion = "$ammonite_version$"
 
 libraryDependencies ++= Seq(
   "com.typesafe" % "config" % "1.3.1",
@@ -69,8 +70,7 @@ libraryDependencies ++= Seq(
   // type classes
   "com.github.mpilquist" %% "simulacrum" % "0.12.0",
   // li haoyi ammonite repl embed
-  "com.lihaoyi" % "ammonite" % "1.6.7" % "test" cross CrossVersion.full
-
+  "com.lihaoyi" % "ammonite" % AmmoniteVersion % "test" cross CrossVersion.full
 )
 
 //ivyScala := ivyScala.value map { _.copy(overrideScalaVersion = true) }
@@ -80,17 +80,6 @@ resolvers ++= Seq(
   "Secured Central Repository" at "https://repo1.maven.org/maven2",
   Resolver.sonatypeRepo("snapshots")
 )
-
-// scalariform
-//scalariformSettings
-
-// ScalariformKeys.preferences := ScalariformKeys.preferences.value
-//   .setPreference(AlignSingleLineCaseStatements, true)
-//   .setPreference(DoubleIndentClassDeclaration, true)
-//   .setPreference(IndentLocalDefs, true)
-//   .setPreference(IndentPackageBlocks, true)
-//   .setPreference(IndentSpaces, 2)
-//   .setPreference(MultilineScaladocCommentsStartOnFirstLine, false)
 
 // ammonite repl
 sourceGenerators in Test += Def.task {
