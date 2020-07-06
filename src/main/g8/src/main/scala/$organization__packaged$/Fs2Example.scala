@@ -1,4 +1,4 @@
-package org.example
+package $organization$
 
 import fs2._
 import cats.effect.IO
@@ -36,7 +36,7 @@ object Fs2FizzBuzz extends App {
     fizzBuzz.
     zipWithIndex.
     evalMap[IO,Unit]{
-      case (Some(a), i) => IO(println(s"${i + 1}. $a"))
+      case (Some(a), i) => IO(println(s"\${i + 1}. \$a"))
       case (None, _) => IO.pure(())
         }.take(n).
           compile.

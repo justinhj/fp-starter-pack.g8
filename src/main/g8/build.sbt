@@ -2,10 +2,10 @@ import sbt._
 
 lazy val fp1 = (project in file(".")).
   settings (
-    name := "fp-1",
+    name := "$name;format="norm,word"$",
     organization := "org.example",
     version := "0.1-SNAPSHOT",
-    scalaVersion := $scala_version$
+    scalaVersion := "$scala_version$"
   )
 
 addCompilerPlugin("org.typelevel" %% "kind-projector" % "0.11.0" cross CrossVersion.full)

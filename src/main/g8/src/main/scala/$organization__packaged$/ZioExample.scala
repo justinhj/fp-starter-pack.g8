@@ -1,4 +1,4 @@
-package org.example
+package $organization$
 
 // Starter ZIO App
 
@@ -25,7 +25,7 @@ object ZioExample extends App {
       input <- getStrLn
       _ <-
         if (! nameEmpty(input))
-          putStrLn(s"Hello, $input!")
+          putStrLn(s"Hello, \$input!")
         else {
           putStrLn(s"Name was empty!") *>
           ZIO.fail(new IllegalArgumentException("Name cannot be empty"))

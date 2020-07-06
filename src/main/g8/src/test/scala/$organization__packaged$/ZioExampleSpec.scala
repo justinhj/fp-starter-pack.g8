@@ -1,4 +1,4 @@
-package org.example
+package $organization$
 
 import zio.test._
 import ZioExample._
