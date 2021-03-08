@@ -98,7 +98,6 @@ libraryDependencies ++= Seq(
 testFrameworks += new TestFramework("zio.test.sbt.ZTestFramework")
 
 resolvers ++= Seq(
-  "Typesafe Snapshots" at "http://repo.typesafe.com/typesafe/snapshots/",
   "Secured Central Repository" at "https://repo1.maven.org/maven2",
   Resolver.sonatypeRepo("snapshots")
 )
