@@ -69,6 +69,7 @@ val ZIOVersion = "$zio_version$"
 val ShapelessVersion = "$shapeless_version$"
 val FS2Version = "$fs2_version$"
 val AmmoniteVersion = "$ammonite_version$"
+val PreludeVersion = "$prelude_version$"
 
 libraryDependencies ++= Seq(
   "com.typesafe" % "config" % "1.3.1",
@@ -89,6 +90,7 @@ libraryDependencies ++= Seq(
   "dev.zio" %% "zio-test" % ZIOVersion % "test",
   "dev.zio" %% "zio-test-sbt" % ZIOVersion % "test",
   "dev.zio" %% "zio-streams" % ZIOVersion,
+  "dev.zio" %% "zio-prelude" % PreludeVersion,
   // type class derivation
   "org.typelevel" %% "simulacrum" % "1.0.0",
   // Embed Li Haoyi's Ammonite repl in your test project
