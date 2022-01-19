@@ -4,7 +4,7 @@
 
 [Giter8](http://www.foundweekends.org/giter8/) template to get up and running with Cats, Zio, Monix, Fs2
 
-As a bonus includes Li Haoyi's Ammonite REPL embedded into the test module so you can use `test:run` to play with FP on the command line 
+As a bonus includes Li Haoyi's Ammonite REPL embedded into the test module so you can use `Test/run` to play with FP on the command line 
 
 ```
 g8 justinhj/fp-starter-pack.g8
@@ -26,7 +26,7 @@ You can start writing code in src/main/scala/YOU/YOURPROJECT/YourProject.scala
 
 You can access an Ammonite REPL (Ammonite greatly improves the Scala REPL) by runnning the following at the sbt prompt: 
 
-`test:run` 
+`Test/run` 
 
 ## Main libraries included 
 
@@ -46,4 +46,4 @@ Use the Scalaz branch to replace Cats with Scalaz
 
 This is a fork of bneil/finch-skeleton.g8 
 
-I used that excellent example of a g8 template and modified for my own ends by updating Scala, SBT, adding and removing libaries and plugins
+I used that excellent example of a g8 template and modified for my own ends by updating Scala, sbt, adding and removing libraries and plugins
