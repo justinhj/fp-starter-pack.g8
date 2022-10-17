@@ -8,7 +8,7 @@ lazy val fp1 = (project in file(".")).
     scalaVersion := "$scala_version$"
   )
 
-addCompilerPlugin("org.typelevel" %% "kind-projector" % "0.11.0" cross CrossVersion.full)
+addCompilerPlugin("org.typelevel" %% "kind-projector" % "0.13.2" cross CrossVersion.full)
 
 // Source https://tpolecat.github.io/2017/04/25/scalac-flags.html
 // Have commented out some options that no longer work with Scala 2.13.3 and later
