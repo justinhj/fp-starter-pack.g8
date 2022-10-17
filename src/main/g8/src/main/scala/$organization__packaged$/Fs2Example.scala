@@ -1,8 +1,8 @@
 package $organization$
 
 import fs2._
-import cats.effect.IO
 import cats.implicits._
+import cats.effect.{ExitCode, IO, IOApp}
 
 /*
  * fs2 - https://fs2.io/
@@ -21,7 +21,7 @@ import cats.implicits._
  * declarative control flow. (cf: This talk by Fabio Labella https://youtu.be/81I_nzjUYy4)
 */
 
-object Fs2FizzBuzz extends App {
+object Fs2FizzBuzz extends IOApp {
 
   val fizzBuzz =
     Stream.emits(List(None, None, "Fizz".some)).repeat.
@@ -43,5 +43,5 @@ object Fs2FizzBuzz extends App {
           drain.
           unsafeRunSync()
 
-  fizBuzzStream(20)
+  override def run(args: List[String]): IO[ExitCode] = fizBuzzStream(20).compile.drain.as(ExitCode.Success)
 }

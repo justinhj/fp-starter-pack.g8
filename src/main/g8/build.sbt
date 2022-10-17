@@ -64,7 +64,6 @@ javacOptions ++= Seq("-Xlint:unchecked", "-Xlint:deprecation")
 
 val CatsVersion = "$cats_version$"
 val CatsEffectVersion = "$cats_effect_version$"
-val MonixVersion = "$monix_version$"
 val ZIOVersion = "$zio_version$"
 val ShapelessVersion = "$shapeless_version$"
 val FS2Version = "$fs2_version$"
@@ -81,8 +80,6 @@ libraryDependencies ++= Seq(
   "org.typelevel" %% "cats-effect" % CatsEffectVersion,
   // fs2
   "co.fs2" %% "fs2-core" % FS2Version,
-  // Monix
-  "io.monix" %% "monix" % MonixVersion,
   // Shapeless
   "com.chuusai" %% "shapeless" % ShapelessVersion,
   // Zio
@@ -98,11 +95,6 @@ libraryDependencies ++= Seq(
 )
 
 testFrameworks += new TestFramework("zio.test.sbt.ZTestFramework")
-
-resolvers ++= Seq(
-  "Secured Central Repository" at "https://repo1.maven.org/maven2",
-  Resolver.sonatypeRepo("snapshots")
-)
 
 // Ammonite repl launch command (Run the test:run task in sbt)
 sourceGenerators in Test += Def.task {
