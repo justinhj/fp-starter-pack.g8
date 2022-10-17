@@ -18,7 +18,7 @@ object ZioExample extends ZIOAppDefault {
       input <- readLine
       _ <-
         if (! nameEmpty(input))
-          printLine(s"Hello, $input!")
+          printLine(s"Hello, \$input!")
         else {
           printLine(s"Name was empty!") *>
           ZIO.fail(new IllegalArgumentException("Name cannot be empty"))
