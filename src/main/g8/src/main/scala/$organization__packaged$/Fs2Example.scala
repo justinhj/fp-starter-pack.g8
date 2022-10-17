@@ -3,6 +3,7 @@ package $organization$
 import fs2._
 import cats.implicits._
 import cats.effect.{ExitCode, IO, IOApp}
+import cats.effect.unsafe.implicits.global
 
 /*
  * fs2 - https://fs2.io/
@@ -38,10 +39,7 @@ object Fs2FizzBuzz extends IOApp {
     evalMap[IO,Unit]{
       case (Some(a), i) => IO(println(s"\${i + 1}. \$a"))
       case (None, _) => IO.pure(())
-        }.take(n).
-          compile.
-          drain.
-          unsafeRunSync()
+        }.take(n)
 
   override def run(args: List[String]): IO[ExitCode] = fizBuzzStream(20).compile.drain.as(ExitCode.Success)
 }
